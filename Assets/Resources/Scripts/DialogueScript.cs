@@ -6,11 +6,15 @@ public class DialogueScript : MonoBehaviour
 {
     DialogueSystem dialogue;
 
+    GameManager manager; // cached reference
+
     // Start is called before the first frame update
     void Start()
     {
         dialogue = DialogueSystem.instance;
         dialogue.speechText.SetText(s[0].Split(':')[0]);
+
+        manager = FindObjectOfType<GameManager>();
     }
 
 
@@ -38,14 +42,18 @@ public class DialogueScript : MonoBehaviour
         if (!dialogue.isSpeaking || dialogue.isWaitingForUserInput)
         {
             Debug.Log("Next index test: " + index + "\n");
-            if (index >= s.Length - 1)
-            {
-                return;
-            }
-            //if (index <= 0)
+            //if (index >= s.Length - 1)
             //{
-            //    index = 1;
+            //    return;
             //}
+            //if (index >= s.Length)
+            //{
+            //} else 
+            if (index == s.Length - 1)
+            {
+                manager.GetComponent<SceneLoader>().LoadNextScene();
+                return; // nowhere to go if at the last element
+            }
             index++;
             Say(s[index]);
             Debug.Log("Index after Say: " + index + "\n\n");

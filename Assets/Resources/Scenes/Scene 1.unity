@@ -395,9 +395,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   s:
-  - Here is some test dialogue.:Ghost Lady
-  - More dialogue here.
-  - Okay, I'm done.
+  - Blinking your eyes at the sudden sunlight, your vision focuses on a large building
+    in front of you.:Narrator
+  - "Three stories of chipped concrete tower above you while a large porch decorated
+    with small pillars shades the entrance from the sun\u2019s heat."
+  - "Despite the invading plants and cracked windows the architecture seems familiar
+    to you, but you can\u2019t quite place it. Where were you? How did you get here?"
+  - "Looking around you don\u2019t see anyone walking the streets. You don\u2019t
+    hear the vibrant sounds of town life. Everything seems to be hazy and quiet,
+    like a ghost town."
+  - 'Suddenly the wind picks up and dust flies up from the street to your eyes. Seeking
+    shelter from the dust storm, you head into the building. '
 --- !u!114 &1447453475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,6 +517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 311538340, guid: 1848e003518e3094b9ace873f89fbbe0, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 326069659157493329, guid: 1848e003518e3094b9ace873f89fbbe0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -636,6 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3285713963220918645, guid: 1848e003518e3094b9ace873f89fbbe0,
         type: 3}
+      propertyPath: m_text
+      value: Narrator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285713963220918645, guid: 1848e003518e3094b9ace873f89fbbe0,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 295dd14a0eaa95d47a8f56ab2986d8c4,
@@ -655,6 +672,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 5961884051981855686, guid: 1848e003518e3094b9ace873f89fbbe0,
+        type: 3}
+      propertyPath: m_text
+      value: Hotel Exterior
       objectReference: {fileID: 0}
     - target: {fileID: 5961884052000413136, guid: 1848e003518e3094b9ace873f89fbbe0,
         type: 3}
