@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\DialogueScript.cs" />
+    <Compile Include="Assets\Resources\Scripts\DialogueSystem.cs" />
     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
     <Compile Include="Assets\Resources\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Resources\Scripts\UIButton.cs" />
